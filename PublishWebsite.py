@@ -7,10 +7,10 @@ import time
 
 def specifics():
     debugger = 0
-    backup_en = 1
+    backup_en = 0
     nicepage_foot_rem = 1
     color_change = 0
-    git_push = 1
+    git_push = 0
     custom_commit = "\"Remove footer - add python to new repo\""
     return debugger, backup_en, nicepage_foot_rem, color_change, git_push, custom_commit
 
