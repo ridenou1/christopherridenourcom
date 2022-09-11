@@ -5,17 +5,11 @@ from colorama import Fore, Back, Style
 import os
 import time
 
-def specifics():
+def main():
     debugger = 0
-    backup_en = 0
     nicepage_foot_rem = 1
-    color_change = 0
     git_push = 0
     custom_commit = "\"Remove footer - add python to new repo\""
-    return debugger, backup_en, nicepage_foot_rem, color_change, git_push, custom_commit
-
-def main():
-    debugger, backup_en, nicepage_foot_rem, color_change, git_push, custom_commit = specifics()
     # Adding this comment to test github correctness
     print("\nFinding all website source HTML files...")
 
@@ -24,21 +18,10 @@ def main():
         list_html = source_html(debugger)
 
     # Need to modify for any programs requiring css files
-    if color_change:
-        list_css = source_css(debugger)
-        if (backup_en == 0):
-            warning("Experimental portion - creating backup without user consent...")
-            backup_en = 1
 
-    if backup_en:
-        create_backup(debugger)
-    
     if nicepage_foot_rem:
         print("\nRemoving all Nicepage html generation...")
         nicepage_footer_locator(list_html, debugger)
-
-    if color_change:
-        color_match(list_css, debugger)
 
     if git_push:
         github_exec(debugger, custom_commit)
@@ -52,128 +35,6 @@ def warning(in_string):
 def success(in_string):
     print(Fore.GREEN + in_string + Style.RESET_ALL)
     return
-
-def create_backup(debugger):
-    if debugger:
-        print("Creating backup...")
-    local_storage = '~/Documents/Website/crsourceweb'
-    backup_location = '~/Documents/Website/backup'
-    # folderExist = os.path.isfile(backup_location)
-    # if (folderExist):
-    #     warning("Backup does not already exist, generating backup...")
-    backup_string = 'cp -R ' + local_storage + ' ' + backup_location
-    os.system(backup_string)
-    success("Backup created.")
-    return
-
-def color_match(list_css, debugger):
-    def color_find(color1, color2, sub1, sub2, type_color):
-        # To Be Implemented
-
-        if type_color == "solid":
-            #Solid
-            for file in list_css:
-                if debugger == 0:
-                    print("Changing colors [SOLID " + str(color1) + "] in " + str(file) + "...", "\r", end="")
-                else:
-                    print("Changing colors [SOLID " + str(color1) + "] in  " + str(file) + " in debug mode...")
-        elif type_color == "linear-gradient":
-            # Gradient
-            # Base Statements
-            up_arr = []
-            left_arr = []
-            right_arr = []
-            down_arr = []
-            found_lines = 0
-
-            # Check if it says left
-            bsl = "background-image: linear-gradient(to left, " + color1 + ", " + color2 + ");"
-            bsr = "background-image: linear-gradient(to right, " + color1 + ", " + color2 + ");"
-            # Check if it says up
-            bsu = "background-image: linear-gradient(" + color1 + ", " + color2 + ");"
-            # Check if it says down
-            bsd = "background-image: linear-gradient(to down, " + color1 + ", " + color2 + ");"
-
-            for file in list_css:
-                if debugger == 0:
-                    print("Changing colors [GRADIENT " + str(color1) + " " + str(color2) + "] in " + str(file) + "...", "\r", end="")
-                else:
-                    print("Changing colors [GRADIENT " + str(color1) + " " + str(color2) + "] in " + str(file) + " in debug mode...")
-                with open(file, 'r') as f:
-                    print(str(file) + " opened")
-                    for num, line in enumerate(f, 1):
-                        if bsr in line:
-                            if debugger:
-                                print("Found replacement needed in line " + str(num))
-                            print(bsr)
-                            right_arr.append(num)
-                            found_lines += 1
-                        if bsl in line:
-                            if debugger:
-                                print("Found replacement needed in line " + str(num))
-                            print(bsl)
-                            left_arr.append(num)
-                            found_lines += 1
-                        if bsu in line:
-                            if debugger:
-                                print("Found replacement needed in line " + str(num))
-                            print(bsu)
-                            up_arr.append(num)
-                            found_lines += 1
-                        if bsd in line:
-                            if debugger:
-                                print("Found replacement needed in line " + str(num))
-                            print(bsd)
-                            down_arr.append(num)
-                            found_lines += 1
-                print(str(found_lines))
-                with open(file, 'r') as fr:
-                    lines = fr.readlines()
-
-                # for i in right_arr:
-                #     right_arr[i] += 1
-                # for i in left_arr:
-                #     left_arr[i] += 1
-                # for i in up_arr:
-                #     up_arr[i] += 1
-                # for i in down_arr:
-                #     down_arr[i] += 1
-                # print(str(right_arr))
-                # print(str(left_arr))
-                # print(str(up_arr))
-                # print(str(down_arr))
-
-                with open(file, 'w') as fw:
-                    for num, line in enumerate(lines):
-                        num = num + 1
-                        # print(str(num) + "num")
-                        if num in right_arr:
-                            if debugger:
-                                print("Right found")
-                            fw.write("  background-image: linear-gradient(to right, " + sub1 + ", " + sub2 + ");\n")
-                        elif num in left_arr:
-                            if debugger:
-                                print("Left found")
-                            fw.write("  background-image: linear-gradient(to left, " + sub1 + ", " + sub2 + ");\n")
-                        elif num in up_arr:
-                            if debugger:
-                                print("Up found")
-                            fw.write("  background-image: linear-gradient(" + sub1 + ", " + sub2 + ");\n")
-                        elif num in down_arr:
-                            if debugger:
-                                print("Down found")
-                            fw.write("  background-image: linear-gradient(to down, " + sub1 + ", " + sub2 + ");\n")
-                        else:
-                            # if debugger:
-                            #     print("none found")
-                            fw.write(line)
-
-        else:
-            warning("Error: color matching type invalid.")
-    
-    # Contacts gradient
-    color_find("#2cccc4", "#41807c", "#0c6524", "#093514", "linear-gradient")
-
 
 def github_exec(debugger, custom_commit):
     # os.system("echo Now ready to push to Github")
