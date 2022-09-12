@@ -3,12 +3,12 @@
 }
 
 .u-section-1 .u-sheet-1 {
-  min-height: 446px;
+  min-height: 425px;
 }
 
 .u-section-1 .u-text-1 {
   font-weight: 700;
-  margin: 20px 873px 0 20px;
+  margin: 21px 873px 0 20px;
 }
 
 .u-section-1 .u-image-1 {
@@ -19,12 +19,12 @@
 
 .u-section-1 .u-text-2 {
   font-size: 1.25rem;
-  margin: -289px 355px 60px 20px;
+  margin: -289px 355px 21px 20px;
 }
 
 @media (max-width: 1199px) {
   .u-section-1 .u-sheet-1 {
-    min-height: 460px;
+    min-height: 499px;
   }
 
   .u-section-1 .u-text-1 {
@@ -32,68 +32,81 @@
     margin-left: 0;
   }
 
+  .u-section-1 .u-image-1 {
+    margin-top: 52px;
+    margin-right: 21px;
+  }
+
   .u-section-1 .u-text-2 {
-    margin-right: 175px;
+    width: auto;
+    margin-top: -353px;
+    margin-right: 314px;
     margin-left: 0;
   }
 }
 
 @media (max-width: 991px) {
   .u-section-1 .u-sheet-1 {
-    min-height: 736px;
+    min-height: 732px;
   }
 
   .u-section-1 .u-text-1 {
     width: auto;
-    margin-top: 28px;
+    margin-top: 25px;
     margin-right: 473px;
   }
 
   .u-section-1 .u-image-1 {
-    margin-top: 126px;
-    margin-right: 54px;
+    margin-top: 127px;
   }
 
   .u-section-1 .u-text-2 {
-    width: auto;
-    margin-top: -417px;
+    margin-top: -429px;
     margin-right: 360px;
+    margin-bottom: 25px;
   }
 }
 
 @media (max-width: 767px) {
   .u-section-1 .u-sheet-1 {
-    min-height: 737px;
+    min-height: 709px;
   }
 
   .u-section-1 .u-text-1 {
     margin-right: 293px;
   }
 
+  .u-section-1 .u-image-1 {
+    width: 126px;
+    height: 318px;
+    margin-right: 0;
+  }
+
   .u-section-1 .u-text-2 {
-    margin-right: 180px;
+    margin-right: 147px;
   }
 }
 
 @media (max-width: 575px) {
   .u-section-1 .u-sheet-1 {
-    min-height: 1099px;
+    min-height: 1223px;
   }
 
   .u-section-1 .u-text-1 {
+    margin-top: 12px;
     margin-right: 93px;
   }
 
   .u-section-1 .u-image-1 {
     width: 128px;
     height: 161px;
-    margin-top: 441px;
-    margin-right: 0;
+    margin-top: 486px;
   }
 
   .u-section-1 .u-text-2 {
-    margin-top: -545px;
+    margin-top: -635px;
     margin-right: 128px;
+    margin-bottom: 60px;
   }
 } .u-section-2 {
   background-image: linear-gradient(#dbe2ef, #f9f7f7);
@@ -106,6 +119,11 @@
 .u-section-2 .u-text-1 {
   font-weight: 700;
   width: 628px;
+  --animation-custom_in-translate_x: 0px;
+  --animation-custom_in-translate_y: 0px;
+  --animation-custom_in-opacity: 0;
+  --animation-custom_in-rotate: 0deg;
+  --animation-custom_in-scale: 0.3;
   margin: 34px auto 0;
 }
 
@@ -1396,4 +1414,61 @@
   .u-section-7 .u-text-6 {
     margin-top: 172px;
   }
+} .u-section-8 {
+  background-image: linear-gradient(#dbe2ef, white);
+}
+
+.u-section-8 .u-sheet-1 {
+  min-height: 28px;
+} .u-section-9 {
+  background-image: none;
+}
+
+.u-section-9 .u-sheet-1 {
+  min-height: 294px;
+}
+
+.u-section-9 .u-text-1 {
+  margin: 68px auto 0;
+}
+
+.u-section-9 .u-text-2 {
+  width: 680px;
+  margin: 20px auto 0;
+}
+
+.u-section-9 .u-btn-1 {
+  --animation-custom_in-translate_x: 0px;
+  --animation-custom_in-translate_y: 0px;
+  --animation-custom_in-opacity: 0;
+  --animation-custom_in-rotate: 0deg;
+  --animation-custom_in-scale: 1;
+  transition-duration: 0.5s;
+  margin: 30px auto 60px;
+}
+
+@media (max-width: 767px) {
+  .u-section-9 .u-text-2 {
+    width: 540px;
+  }
+}
+
+@media (max-width: 575px) {
+  .u-section-9 .u-text-2 {
+    width: 340px;
+  }
+}
+
+.u-section-9 .u-btn-1,
+.u-section-9 .u-btn-1:before,
+.u-section-9 .u-btn-1 > .u-container-layout:before {
+  transition-property: fill, color, background-color, stroke-width, border-style, border-width, border-top-width, border-left-width, border-right-width, border-bottom-width, custom-border, borders, box-shadow, text-shadow, opacity, border-radius, stroke, border-color, font-size, font-style, font-weight, text-decoration, letter-spacing, transform, background-image, background-size, background-position;
+}
+
+.u-section-9 .u-btn-1.u-btn-1.u-btn-1:hover {
+  border-radius: 25px !important;
+}
+
+.u-section-9 .u-btn-1.u-btn-1.u-btn-1.hover {
+  border-radius: 25px !important;
 }
