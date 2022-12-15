@@ -1415,29 +1415,23 @@
     margin-top: 172px;
   }
 } .u-section-8 {
-  background-image: linear-gradient(#dbe2ef, white);
-}
-
-.u-section-8 .u-sheet-1 {
-  min-height: 28px;
-} .u-section-9 {
   background-image: none;
 }
 
-.u-section-9 .u-sheet-1 {
+.u-section-8 .u-sheet-1 {
   min-height: 294px;
 }
 
-.u-section-9 .u-text-1 {
+.u-section-8 .u-text-1 {
   margin: 68px auto 0;
 }
 
-.u-section-9 .u-text-2 {
+.u-section-8 .u-text-2 {
   width: 680px;
   margin: 20px auto 0;
 }
 
-.u-section-9 .u-btn-1 {
+.u-section-8 .u-btn-1 {
   --animation-custom_in-translate_x: 0px;
   --animation-custom_in-translate_y: 0px;
   --animation-custom_in-opacity: 0;
@@ -1448,40 +1442,40 @@
 }
 
 @media (max-width: 991px) {
-  .u-section-9 .u-text-1 {
+  .u-section-8 .u-text-1 {
     width: auto;
     margin-top: 76px;
   }
 
-  .u-section-9 .u-text-2 {
+  .u-section-8 .u-text-2 {
     width: auto;
     margin-top: 12px;
     margin-left: 20px;
     margin-right: 20px;
   }
 
-  .u-section-9 .u-btn-1 {
+  .u-section-8 .u-btn-1 {
     margin-top: 12px;
   }
 }
 
 @media (max-width: 767px) {
-  .u-section-9 .u-text-2 {
+  .u-section-8 .u-text-2 {
     margin-left: 0;
     margin-right: 0;
   }
 }
 
-.u-section-9 .u-btn-1,
-.u-section-9 .u-btn-1:before,
-.u-section-9 .u-btn-1 > .u-container-layout:before {
+.u-section-8 .u-btn-1,
+.u-section-8 .u-btn-1:before,
+.u-section-8 .u-btn-1 > .u-container-layout:before {
   transition-property: fill, color, background-color, stroke-width, border-style, border-width, border-top-width, border-left-width, border-right-width, border-bottom-width, custom-border, borders, box-shadow, text-shadow, opacity, border-radius, stroke, border-color, font-size, font-style, font-weight, text-decoration, letter-spacing, transform, background-image, image-zoom, background-size, background-position;
 }
 
-.u-section-9 .u-btn-1.u-btn-1.u-btn-1:hover {
+.u-section-8 .u-btn-1.u-btn-1.u-btn-1:hover {
   border-radius: 25px !important;
 }
 
-.u-section-9 .u-btn-1.u-btn-1.u-btn-1.hover {
+.u-section-8 .u-btn-1.u-btn-1.u-btn-1.hover {
   border-radius: 25px !important;
 }
