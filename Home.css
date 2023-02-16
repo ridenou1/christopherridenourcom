@@ -135,12 +135,12 @@
   --animation-custom_in-opacity: 0;
   --animation-custom_in-rotate: 0deg;
   --animation-custom_in-scale: 0.3;
-  margin: -52px auto 0 244px;
+  margin: -104px auto 0 244px;
 }
 
 .u-section-2 .u-slider-1 {
   min-height: 341px;
-  margin-top: 34px;
+  margin-top: 86px;
   margin-bottom: 52px;
 }
 
@@ -384,7 +384,6 @@
   .u-section-2 .u-shape-1 {
     width: 75px;
     height: 104px;
-    margin-top: -104px;
     margin-left: 75px;
   }
 
